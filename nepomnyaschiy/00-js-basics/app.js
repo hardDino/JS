@@ -109,7 +109,7 @@
 //   i++
 // }
 
-const numbers = [2, 7, 19, 22, 38, 9];
+//const numbers = [2, 7, 19, 22, 38, 9];
 
 // let i = 0;
 
@@ -122,8 +122,83 @@ const numbers = [2, 7, 19, 22, 38, 9];
 //   i++;
 // }
 
-for (let i = 0; i < numbers.length; i++) {
-  i % 2 === 0 ? console.log(numbers[i] *= 3) : console.log(numbers[i]);
+// for (let i = 0; i < numbers.length; i++) {
+//   i % 2 === 0 ? console.log(numbers[i] += 3) : console.log(numbers[i]);
+// }
+
+// console.log(numbers);
+// let i = 3;
+
+// while(i > 0) {
+//   const age = +prompt('How old are you?')
+
+//   if (age) {
+//     alert('Welcome!')
+//     break;
+//   }
+
+//   alert(`Wrong! You have ${i-1} attempts left`)
+//   i--
+// }
+
+// alert('App has finished.')
+
+// const numbers = [1, 2, 2, 13, 11, 7, 18, 20, 22, 14, 15];
+
+// const evenNumbers = [];
+
+// for (let i = 0; i < numbers.length; i++) {
+//   if (numbers[i] % 2 === 0) {
+//     evenNumbers.push(numbers[i])
+//   }
+
+//   if (evenNumbers.length === 3) break;
+// }
+
+// console.log(evenNumbers);
+
+// function multiply(a, b, c) {
+//   const res = a * b * c;
+//   return (res);
+// }
+
+// console.log(multiply(4567, 5678, 5678));
+
+// function euroToRub(euro) {
+//   const rub = euro * 90;
+//   return (rub);
+// }
+
+// console.log(euroToRub(67));
+
+// function milesToKm(miles) {
+//   const km = miles * 1.609;
+//   return (km)
+// }
+
+// console.log(milesToKm(16));
+
+let secretNum = Math.ceil(Math.random() * 10);
+//let number = 5;
+let tries = 0;
+
+function guessNum(num) {
+  console.log(secretNum);
+  console.log(tries);
+
+  if (num === secretNum) {
+    alert(`Congratulations! ${num} is correct number.`)
+    return (alert('The game has finished. You win!'))
+  } else {
+    alert('Sorry! That is wrong number.')
+  }
+
+  tries++;
+  
+  if (tries > 4) {
+    return (alert('The game has finished.\nYou lose, loser!'))
+  }
 }
 
-console.log(numbers);
+
+
