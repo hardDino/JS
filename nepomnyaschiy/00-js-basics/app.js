@@ -178,27 +178,214 @@
 
 // console.log(milesToKm(16));
 
-let secretNum = Math.ceil(Math.random() * 10);
-//let number = 5;
-let tries = 0;
+// let secretNum = Math.ceil(Math.random() * 10);
+// //let number = 5;
+// let tries = 0;
 
-function guessNum(num) {
-  console.log(secretNum);
-  console.log(tries);
+// function guessNum(num) {
+//   console.log(secretNum);
+//   console.log(tries);
 
-  if (num === secretNum) {
-    alert(`Congratulations! ${num} is correct number.`)
-    return (alert('The game has finished. You win!'))
-  } else {
-    alert('Sorry! That is wrong number.')
-  }
+//   if (num === secretNum) {
+//     alert(`Congratulations! ${num} is correct number.`)
+//     return (alert('The game has finished. You win!'))
+//   } else {
+//     alert('Sorry! That is wrong number.')
+//   }
 
-  tries++;
+//   tries++;
   
-  if (tries > 4) {
-    return (alert('The game has finished.\nYou lose, loser!'))
-  }
-}
+//   if (tries > 4) {
+//     return (alert('The game has finished.\nYou lose, loser!'))
+//   }
+// }
+
+//Objects
+// const developer = {
+//   name: 'Vasiliy',
+//   surname: 'Petrov',
+//   age: 30,
+//   skills: ['JS', 'TS', 'React'],
+//   isMaried: false,
+// };
+
+// developer.isMaried = true;
+
+// delete developer.isMaried;
+
+//  console.log(developer.isMaried);
+
+// const dog = {
+//   name: 'Hren',
+//   age: 13,
+//   color: 'Red',
+//   weight: 17,
+// }
+
+// dog.breed = 'Jack Russell Terrier'
+
+// console.log(dog);
 
 
+// const Anna = { 
+//   age: 30,
+//   hobby: 'fishing',
+// }
 
+// const Yulia = Anna;
+
+// Yulia.skills = [ 'pc_gaming' ]
+
+//console.log(Anna);
+
+//console.log('age' in Anna);
+
+// for ( let prop in Anna) {
+//   console.log(`${prop}: ${Anna[prop]}`);
+// }
+
+// const developer = {
+//   name: 'Vasiliy',
+//   surname: 'Petrov',
+//   age: 30,
+//   skills: ['JS', 'TS', 'React'],
+//   isMaried: false,
+//   addAge() {
+//     this.age++
+//     console.log(this);
+//   },
+//   getMaried() {
+//     this.isMaried = true;
+//   },
+//   getDivorced() {
+//     this.isMaried = false;
+//   }
+// };
+
+// console.log(developer.getMaried());
+// console.log(developer.isMaried);
+// console.log(developer.getDivorced());
+// console.log(developer.isMaried);
+
+// const person = {
+//   name: 'Anna',
+//   surname: 'Dance',
+//   age: 18,
+//   // greeting() {
+//   //   console.log('Hello');
+//   // }
+// };
+
+// person.greeting = function () {
+//   console.log('Hello');
+// }
+
+// person.changeSurname = function (name) {
+//   this.surname = name;
+// }
+
+// person.greeting();
+
+// person.changeSurname('Politkovskaya');
+
+// for (let prop in person) {
+//   console.log(prop, person[prop]);
+// }
+
+//const str = 'Hello world'
+
+// console.log(str);
+// console.log(str.trim());
+
+//console.log(str.split(' ').join(' | '));
+
+//console.log(str.toLowerCase().includes('js'));
+
+// 1.
+// const correctAnswer = 'JavaScript';
+// const userAnswer = ' javaScript! ';
+
+// const isCorrect = (userAnswer.toLowerCase().includes(correctAnswer.toLowerCase()));
+
+// function desicion () {
+//   let result;
+//   if  {
+//     result = true;
+//   } else {
+//     result = false;
+//   }
+
+//   return (result);
+// } // TODO: сохранить true или false в зависимости от выполнения условия по заданию 1.
+
+// console.log(correctAnswer);
+// console.log(userAnswer);
+// console.log(isCorrect);
+
+// 2.
+// const salary = 15000.2085;
+
+// const salaryFixed = salary.toFixed(2);
+
+// console.log(salaryFixed);
+
+// 1
+// const fruits = ['apple', 'banana', 'melon', 'orange'];
+// const hasOrange = fruits.includes('orange');
+// console.log(hasOrange); // TODO: сохранить булевое значение соответствующее наличию 'orange' в массиве fruits
+
+// // 2
+// const cars = ['BMW', 'Nissan', 'VW', 'Skoda', 'Audi', 'Kia'];
+// const favoriteCars = cars.slice(0, 3) // TODO: сохраните в эту переменную первые три значения из массива cars
+
+// // 3
+// const otherCars = cars.slice(3) // TODO: сохраните в эту константу три последних значения из массива cars
+
+// console.log(favoriteCars);
+// console.log(otherCars);
+
+// var riddle = {
+//   question: 'Висит груша нельзя скушать',
+//   correctAnswer: 'ламПочка',
+//   hints: ['это съедобное', 'это фрукт'],
+//   tries: 3,
+//   checkAnswer(answer) {
+//     // TODO: написать логику проверки правильного ответа
+//     // alert для пользователя, console.log()
+//     if (this.tries < 1) {
+//       console.log("Игра окончена")
+//       return alert("Игра окончена")
+//     }
+    
+//     if (answer.toLowerCase().includes(this.correctAnswer.toLowerCase())) {
+//       alert("Правильный ответ")
+//       console.log("Правильный ответ")
+//     } else {
+//       alert("Неправильный ответ")
+//       console.log("Неправильный ответ")
+//       this.tries--
+//       if (this.tries > 1) {
+//         alert(`Подсказка: ${this.hints[0]}`)
+//       } else if (this.tries > 0) {
+//         alert(`Подсказка: ${this.hints[1]}`)
+//       } else {
+//         return alert("Игра окончена")
+//       }
+//     }
+//   },
+// }
+
+// window.onload = function () {
+//   document.getElementById('riddle').innerText = riddle.question;
+// }
+
+// function check() {
+//   var input = document.getElementsByTagName('input')[0];
+
+//   var guessedAnswer = input.value;
+  
+//   if (guessedAnswer) {
+//     // TODO: вызвать функцию checkAnswer у объекта загадки, передав туда ответ
+//     riddle.checkAnswer(guessedAnswer);
+//   }
+// }
