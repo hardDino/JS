@@ -495,3 +495,33 @@
 
 // supporter2.chant = supporter1.chant.bind(supporter2);
 // supporter1.chant();
+
+// let str = "Любо, братцы, любо!"
+// console.log( str.match(/любо/gi) );
+
+const censor = () => {
+  const array = []
+
+  const replace = (str1, str2 = undefined) => {
+    
+    if (str2) {
+      str1 = String(str1)
+      str2 = String(str2)
+      array.push([str1, str2])
+    } else {
+      for (let pair of array) {
+        str1 = str1.replace(new RegExp(pair[0], 'gi'), pair[1])
+      }
+
+      return str1;
+    }
+    console.log(array);
+  }
+
+  return replace;
+}
+
+const changeScene = censor();
+changeScene('php', 'js')
+changeScene('backend', 'frontend')
+console.log(changeScene('PHP id the most popular programming language for backend web-development'));
