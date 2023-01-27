@@ -400,24 +400,98 @@
 
 // console.log(square(5));
 
-function filterArray(array, callback) {
-  const newArray = [];
-  for (let i = 0; i < array.length; i += 1) {
-    if (callback(array[i])) newArray.push(array[i]);
-  }
-  return newArray;
-}
-const numbers = [1, 2, 3, 4, 5];
+// function filterArray(array, callback) {
+//   const newArray = [];
+//   for (let i = 0; i < array.length; i += 1) {
+//     if (callback(array[i])) newArray.push(array[i]);
+//   }
+//   return newArray;
+// }
+// const numbers = [1, 2, 3, 4, 5];
 
-function isOdd(num) {
-  // Ваш код здесь
-  return(num % 2 === 0 ? false : true);
-}
-function isEven(num) {
-  // Ваш код здесь
-  return (num % 2 === 0 ? true : false);
-}
+// function isOdd(num) {
+//   // Ваш код здесь
+//   return(num % 2 === 0 ? false : true);
+// }
+// function isEven(num) {
+//   // Ваш код здесь
+//   return (num % 2 === 0 ? true : false);
+// }
 
-// Для проверки используйте логи (раскомментируйте их после написания функций)
-console.log(filterArray(numbers, isEven)); // Должен вывести: [2, 4]
-console.log(filterArray(numbers, isOdd)); // Должен вывести: [1, 3, 5]
+// // Для проверки используйте логи (раскомментируйте их после написания функций)
+// console.log(filterArray(numbers, isEven)); // Должен вывести: [2, 4]
+// console.log(filterArray(numbers, isOdd)); // Должен вывести: [1, 3, 5]
+
+//const arr = [1, 2, 3, 4, 5]
+//let i = 0
+
+//function getLength (array) {
+
+//   if (array.pop() === undefined) {
+//     return 0
+//   }
+
+//   array.pop()
+
+//   i++
+
+//   console.log(i);
+  
+//   return (i)
+//   // return console.log(1 + getLength(array));
+// }
+
+//console.log(arr);
+
+//getLength(arr);
+
+
+// function getLength(array) {
+//   if (array.pop() === undefined) return 0;
+
+//   return 1 + getLength(array);
+// }
+
+// console.log(getLength(arr));
+
+// function addByX(num) {
+//   const addByY = (number) => {
+//     return (number + num)
+//   }
+
+//   return addByY
+// }
+
+// const addByTwo = addByX(4);
+// console.log(addByTwo(9));
+
+// const print = () => console.log(this);
+
+// print ();
+
+// const cat = {
+//   name: 'Murka',
+//   say() {
+//     function greeting () {
+//       console.log(this.name);
+//     };
+//     setTimeout(greeting, 2000);
+//   }
+// }
+
+// const supporter1 = {
+//   club: 'Milan',
+//   chant() {
+//     // Добавьте код
+//     const message = () => console.log('Forza', this.club);
+
+//     setTimeout(message, 1000);
+//   }
+// }
+
+// const supporter2 = {
+//   club: 'Inter'
+// }
+
+// supporter2.chant = supporter1.chant.bind(supporter2);
+// supporter1.chant();
