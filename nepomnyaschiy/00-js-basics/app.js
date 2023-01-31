@@ -499,29 +499,459 @@
 // let str = "Любо, братцы, любо!"
 // console.log( str.match(/любо/gi) );
 
-const censor = () => {
-  const array = []
+// const censor = () => {
+//   const array = []
 
-  const replace = (str1, str2 = undefined) => {
+//   const replace = (str1, str2 = undefined) => {
     
-    if (str2) {
-      str1 = String(str1)
-      str2 = String(str2)
-      array.push([str1, str2])
-    } else {
-      for (let pair of array) {
-        str1 = str1.replace(new RegExp(pair[0], 'gi'), pair[1])
-      }
+//     if (str2) {
+//       str1 = String(str1)
+//       str2 = String(str2)
+//       array.push([str1, str2])
+//     } else {
+//       for (let pair of array) {
+//         str1 = str1.replace(new RegExp(pair[0], 'gi'), pair[1])
+//       }
 
-      return str1;
-    }
-    console.log(array);
-  }
+//       return str1;
+//     }
+//     console.log(array);
+//   }
 
-  return replace;
-}
+//   return replace;
+// }
 
-const changeScene = censor();
-changeScene('php', 'js')
-changeScene('backend', 'frontend')
-console.log(changeScene('PHP id the most popular programming language for backend web-development'));
+// const changeScene = censor();
+// changeScene('php', 'js')
+// changeScene('backend', 'frontend')
+// console.log(changeScene('PHP id the most popular programming language for backend web-development'));
+
+// const numbers = [1, 22, 12, 66, 90, 51, 11];
+
+// const doubleNumbers = numbers.map(num => num * 2);
+// console.log(doubleNumbers);
+// console.log(numbers);
+
+// const developers = [
+//   {
+//     id: 1,
+//     fullName: 'Anton Petrov',
+//     skills: ['HTML', 'CSS', 'JavaScript', 'Git', 'React'],
+//     salary: 1000,
+//   },
+//   {
+//     id: 2,
+//     fullName: 'Ivan Ivanov',
+//     skills: ['HTML', 'CSS', 'JavaScript', 'Git', 'Vue'],
+//     salary: 950,
+//   },
+//   {
+//     id: 3,
+//     fullName: 'Albert Sidorov',
+//     skills: ['HTML', 'CSS', 'JavaScript', 'Git', 'jQuery'],
+//     salary: 850,
+//   },
+// ];
+
+// const middleDevelopers = developers.map(item => ({
+//   id: item.id,
+//   name: item.fullName,
+//   skills: [...item.skills, 'TypeScript'],
+//   salary: item.salary + 500,
+// }))
+
+// console.log(middleDevelopers);
+// console.log(developers);
+
+// const numbers = [1,2,3,4,5]
+
+// const oddNumbers = numbers.filter(num => num % 2 !== 0)
+
+// console.log(oddNumbers);
+// console.log(numbers);
+
+// const names = ['Mikhail', 'Ivan', 'Albert', 'John', 'Ian', 'Petr', 'Alexandr', 'Oleg', 'Jaroslav', 'Vsevolod'];
+
+// const shortNames = names.filter(item => item.length < 6)
+
+// const products = [
+//   {
+//     id: 1,
+//     name: 'Intro to JavaScript',
+//     category: 'books',
+//     price: 150,
+//   },
+//   {
+//     id: 2,
+//     name: 'Intro to CSS',
+//     category: 'books',
+//     price: 120,
+//   },
+//   {
+//     id: 3,
+//     name: 'Deep dive into JavaScript',
+//     category: 'books',
+//     price: 350,
+//   },
+//   {
+//     id: 4,
+//     name: 'Intro to PHP',
+//     category: 'books',
+//     price: 250,
+//   },
+//   {
+//     id: 5,
+//     name: 'Deep dive into PHP',
+//     category: 'books',
+//     price: 350,
+//   },
+// ];
+
+// const cheapProducts = products.filter(item => item.price < 300)
+
+// const developers = [
+//   {
+//     id: 1,
+//     fullName: 'Ivan Ivanov',
+//     skills: ['HTML', 'CSS', 'Git', 'Gulp', 'Pug']
+//   },
+//   {
+//     id: 2,
+//     fullName: 'Petr Petrov',
+//     skills: ['HTML', 'CSS', 'Git', 'JavaScript', 'npm']
+//   },
+//   {
+//     id: 3,
+//     fullName: 'Ian Melnikov',
+//     skills: ['HTML', 'CSS', 'Git', 'JavaScript', 'TypeScript']
+//   },
+//   {
+//     id: 4,
+//     fullName: 'Antonio Banderas',
+//     skills: ['HTML', 'CSS', 'Git', 'JavaScript', 'TypeScript', 'React']
+//   },
+// ];
+
+// const tsDevelopers = developers.filter(item => item.skills.includes('TypeScript'))
+
+// console.log(tsDevelopers);
+// console.log(developers);
+
+// const order = [
+//   {
+//     id: 1,
+//     name: 'Лопата',
+//     price: 1000,
+//     quantity: 1,
+//   },
+//   {
+//     id: 2,
+//     name: 'Удочка',
+//     price: 1200,
+//     quantity: 2,
+//   },
+//   {
+//     id: 3,
+//     name: 'Ведро',
+//     price: 500,
+//     quantity: 3,
+//   },
+//   {
+//     id: 4,
+//     name: 'Мороженое',
+//     price: 100,
+//     quantity: 8,
+//   },
+// ];
+
+// const totalPrice = order.reduce((acc, item) => acc = acc + (item.price * item.quantity), 0)
+
+// console.log(totalPrice);
+
+// const players = [
+//   {
+//     id: 1,
+//     name: 'Andres',
+//     surname: 'Iniesta',
+//     club: 'Vissel Cobe',
+//   },
+//   {
+//     id: 2,
+//     name: 'Eden',
+//     surname: 'Hazard',
+//     club: 'Real Madrid',
+//   },
+//   {
+//     id: 3,
+//     name: 'Mo',
+//     surname: 'Salah',
+//     club: 'Liverpool',
+//   },
+//   {
+//     id: 4,
+//     name: 'Lionel',
+//     surname: 'Messi',
+//     club: 'Barcelona',
+//   },
+// ];
+
+// const messi = players.find(player => player.surname === 'Messi')
+
+// console.log(messi);
+
+// const numbers = [1,10,2,11,3,12,4]
+// const cities = ['Madrid', 'Amsterdam', 'Paris', 'Berlin', 'Kiev']
+// const order = [
+//   {
+//     id: 1,
+//     name: 'Лопата',
+//     price: 1000,
+//     quantity: 1,
+//   },
+//   {
+//     id: 2,
+//     name: 'Удочка',
+//     price: 1200,
+//     quantity: 2,
+//   },
+//   {
+//     id: 3,
+//     name: 'Ведро',
+//     price: 500,
+//     quantity: 3,
+//   },
+//   {
+//     id: 4,
+//     name: 'Мороженое',
+//     price: 100,
+//     quantity: 8,
+//   },
+// ];
+
+// numbers.sort((a, b) => b - a)
+
+// const sorting = (a, b) => {
+//   if (a > b) {
+//     return 1
+//   }
+
+//   if (a < b) {
+//     return -1
+//   }
+
+//   return 0
+// }
+
+// order.sort((a, b) => sorting(a.quantity, b.quantity))
+// console.log(order);
+
+// const food = ["Apple", "Melon", "Banana", "Yogurt", "Orange", "Stawberry"];
+
+// const players = [
+//   {
+//     id: 1,
+//     name: 'Cristiano',
+//     surname: 'Ronaldo',
+//     club: 'Juventus',
+//   },
+//   {
+//     id: 2,
+//     name: 'Lionel',
+//     surname: 'Messi',
+//     club: 'Barcelona',
+//   },
+//   {
+//     id: 3,
+//     name: 'Karim',
+//     surname: 'Benzema',
+//     club: 'Real Madrid',
+//   },
+//   {
+//     id: 4,
+//     name: 'Maxi',
+//     surname: 'Gomez',
+//     club: 'Valencia',
+//   },
+//   {
+//     id: 5,
+//     name: 'Quincy',
+//     surname: 'Promes',
+//     club: 'Spartak',
+//   },
+// ];
+
+// food.sort(sorting);
+// console.log(food);
+// players.sort((a, b) => sorting(a.surname, b.surname))
+// console.log(players);
+
+// function getInfo() {
+//   return null;
+  //return ['BMW', 'X3'];
+//}
+
+// const [carName = 'someCar',
+//   carSeries = 'someSeries',
+//   ...someProps
+// ] = getInfo() || []
+
+// console.log(carName, carSeries, someProps);
+
+//const numbers = [1, 10, [2, 11], 3, 12, 4]
+// const numbers = null
+
+// const [a = 0,
+//   b = 0,
+//   [c = 1, d = 1] = [],
+//   ...someNums
+// ] = numbers || []
+
+// console.log(a, b, c, d, someNums);
+
+// const link = {
+//   href: '#',
+//   title: 'simple link',
+//   target: 'blank',
+//   className: 'link',
+//   id: null,
+//   children: {
+//     span: {
+//       content: 'Click me',
+//       className: 'anchor',
+//     },
+//   },
+// }
+
+// const link = null;
+
+// const {target = 'target', 
+//   className = 'className', 
+//   children: {
+//     span: {
+//       content = 'content',
+//       className: renamed = 'renamed',
+//     } = {},
+//   } = {},
+//   ...tail
+// } = link || {};
+
+// console.log(target, className, content, renamed, tail);
+
+// const players = [
+//   {
+//     id: 1,
+//     name: 'Andres',
+//     surname: 'Iniesta',
+//     club: 'Vissel Cobe',
+//   },
+//   {
+//     id: 2,
+//     name: 'Eden',
+//     surname: 'Hazard',
+//     club: 'Real Madrid',
+//   },
+//   {
+//     id: 3,
+//     name: 'Mo',
+//     surname: 'Salah',
+//     club: 'Liverpool',
+//   },
+//   {
+//     id: 4,
+//     name: 'Lionel',
+//     surname: 'Messi',
+//     club: 'Barcelona',
+//   },
+// ];
+
+// const jsonPlayers = JSON.stringify(players)
+// console.log(jsonPlayers);
+
+// const products = [
+//   {
+//     id: 1,
+//     title: 'Lenovo Yoga',
+//     price: 3000,
+//   },
+//   {
+//     id: 2,
+//     title: 'Acer Aspire',
+//     price: 1800,
+//   },
+//   {
+//     id: 3,
+//     title: 'Dell Vostro',
+//     price: 3400
+//   },
+// ];
+
+// let order = [];
+
+// function addToBasket(productId) {
+//   // TODO: добавить проверку наличия товара в заказе (при наличии выдать alert, что товар уже в корзине)
+//   // TODO: если товар еще не в корзине, добавить его из массива products
+//   if (order.find(item => item.id === productId)) {
+//     alert('Товар уже в корзине')
+//     return console.log('Товар уже в корзине')
+//   } else {
+//     order = [...order, products.find(product => product.id === productId)]
+//   }
+  
+//   // Эти строчки не трогаем, они отвечают за переотрисовку страницы
+//   renderCart();
+//   rerenderTotalPrice();
+// }
+
+// function removeFromBasket(productId) {
+//   // TODO: описать логику удаления товара из корзины
+//   // let index = order.indexOf(order.find(item => item.id === productId))
+//   // order.splice(index, 1);
+//   order = order.filter(item => item.id !== productId);
+  
+//   // Эти строчки не трогаем, они отвечают за переотрисовку страницы
+//   renderCart();
+//   rerenderTotalPrice();
+// }
+
+
+// function rerenderTotalPrice() {
+//   // TODO: опишите функционал подсчета общей стоимости заказа
+//   const totalPrice = order.reduce((acc, product) => acc += product.price, 0);
+  
+//   // Не меняйте эту строчку
+//   document.getElementById('total').innerText = totalPrice;
+// }
+
+// Этот метод остается без изменений
+// function renderCart() {
+//   const cart = document.getElementById('basket-items');
+
+//   cart.innerHTML = '';
+//   order.forEach(item => {
+//     const el = document.createElement('li');
+//     el.innerText = item.title;
+//     el.onclick = () => removeFromBasket(item.id);
+//     cart.appendChild(el);
+//   })
+// }
+
+// function squareDigits(num) {
+
+//   const numToString =  String(num).split('');
+
+//   let string = ''
+
+//   for(let i = 0; i < numToString.length; i++) {
+
+//     string = string + String(Number(numToString[i]) ** 2);
+
+//   }
+
+//   return +string
+// }
+
+// function squareDigits(num) {
+//   return +num.toString().split('').map(i => i * i).join('');
+// }
+
+// console.log(squareDigits('457'));
