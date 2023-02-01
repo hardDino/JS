@@ -37,3 +37,31 @@
 
 // removeFromBasket(4)
 
+const str1 =  "Dermatoglyphics"
+const str2 =  "moOseE"
+const str5 =  "isogram"
+const str3 =  "aba"
+const str4 = "isIsogram"
+
+
+// const isIsogram = (str) => {
+//   const strLower = str.toLowerCase()
+//   console.log(strLower)
+//   const strSplit = strLower.split('')
+//   console.log(strSplit)
+//   const strDup = strSplit.filter((item, index, array) => array.indexOf(item) !== index)
+//   console.log(strDup);
+//   const strJoin = strDup.join('')
+//   console.log(strJoin);
+// }
+// const isIsogram = (str) => {
+//   return Boolean(!str.toLowerCase().split('').filter((item, index, array) => array.indexOf(item) !== index).join(''))
+// }
+
+//Better solve
+// function isIsogram(str) {
+//   return new Set(str.toUpperCase()).size == str.length;
+// }
+
+//console.log(counter);
+// (isIsogram(str1))

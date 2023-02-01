@@ -955,3 +955,22 @@
 // }
 
 // console.log(squareDigits('457'));
+
+// const buttons = document.querySelectorAll('.accordion')
+
+// const showAccordion = (btn) => {
+//   btn.addEventListener('click', () => {
+//     const div = btn.nextElementSibling;
+//     div.classList.toggle('show')
+//     btn.classList.toggle('active')
+// })
+// }
+
+// buttons.forEach(showAccordion)
+
+// const buttons = document.querySelectorAll('.accordion')
+
+// buttons.forEach(btn => btn.addEventListener('click', () => {
+//   const div = btn.nextElementSibling;
+//   div.classList.toggle('show')
+// }))
